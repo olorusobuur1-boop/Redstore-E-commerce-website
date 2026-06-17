@@ -1,47 +1,16 @@
 // import React from "react";
 import "./Hero.css";
 import image1 from "../assets/images/image1.png";
-import menuPng from "../assets/images/menu.png";
-import cartPng from "../assets/images/cart.png";
-import logoPng from "../assets/images/logo.png";
+
 import { Link } from "react-router-dom";
+import Navbar from "./navbar";
 
 const Hero = () => {
   return (
     <>
       <div className="header">
         <div className="container">
-          <div className="navbar">
-            <div className="logo">
-              <img src={logoPng} width="125px" />
-            </div>
-            <nav>
-              <ul id="MenuItems">
-                <li>
-                  <a href="">Home</a>
-                </li>
-                <li>
-                  <a href="">Product</a>
-                </li>
-                <li>
-                  <a href="">About</a>
-                </li>
-                <li>
-                  <a href="">Contact</a>
-                </li>
-                <li>
-                  <a href="">Account</a>
-                </li>
-              </ul>
-            </nav>
-            <img
-              src={cartPng}
-              width="30px"
-              height="30px"
-              className="cart-png"
-            />
-            <img src={menuPng} className="menu-icon" /*onClick={menutoggle}*/ />
-          </div>
+          <Navbar />
           <div className="row">
             <div className="col-2">
               <h1>

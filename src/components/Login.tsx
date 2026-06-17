@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./Hero.css";
 import { Link, useNavigate } from "react-router-dom";
 import {
   Box,
@@ -30,7 +31,6 @@ const Login: React.FC = () => {
     setLoading(true);
     setError("");
     setSuccess("");
-    navigate("/");
 
     const payload = {
       email,
@@ -56,6 +56,9 @@ const Login: React.FC = () => {
       }
 
       setSuccess("Login successful!");
+      setTimeout(() => {
+        navigate("/");
+      }, 2000);
 
       console.log("Logged in user:", data);
 
@@ -154,6 +157,7 @@ const Login: React.FC = () => {
           />
 
           <Button
+            className="btn"
             type="submit"
             variant="contained"
             fullWidth

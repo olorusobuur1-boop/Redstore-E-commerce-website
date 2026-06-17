@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import "./Hero.css";
 import {
   Box,
   Paper,
@@ -11,6 +13,7 @@ import {
 import { Link } from "react-router-dom";
 
 const Register: React.FC = () => {
+  const navigate = useNavigate();
   const [form, setForm] = useState({
     firstName: "",
     lastName: "",
@@ -54,7 +57,7 @@ const Register: React.FC = () => {
         throw new Error(data.message || "Registration failed");
       }
 
-      setSuccess("Registration successful!");
+      setSuccess("Registration successful! Redirecting to login page...");
 
       setForm({
         firstName: "",
@@ -66,6 +69,9 @@ const Register: React.FC = () => {
       });
 
       console.log("Registered user:", data);
+      setTimeout(() => {
+        navigate("/login");
+      }, 2000);
     } catch (err) {
       const message =
         err instanceof Error ? err.message : "Something went wrong";
@@ -163,6 +169,7 @@ const Register: React.FC = () => {
           </Grid>
 
           <Button
+            className="btn"
             type="submit"
             variant="contained"
             fullWidth
