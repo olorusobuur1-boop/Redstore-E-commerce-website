@@ -2,13 +2,14 @@
 import Navbar from "../components/Navbar";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
+import "../components/Hero.css";
 const ContactPage = () => {
   return (
-    <>
-    <Navbar />
-    <Contact/>
-    <Footer />
-    </>
+    <div style={{ animation: "fadeIn 0.5s ease-in" }}>
+      <Navbar />
+      <Contact />
+      <Footer />
+    </div>
   );
 };
 
