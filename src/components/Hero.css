@@ -36,6 +36,9 @@ p {
   margin: auto;
   padding: 0px 25px;
 }
+.products-category{
+  animation: fadeIn 0.5s ease-in;
+}
 .row {
   display: flex;
   align-items: center;

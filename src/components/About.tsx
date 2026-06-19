@@ -1,11 +1,10 @@
 // import React from "react";
 import "./About.css";
-import Navbar from "./Navbar";
 
 const About = () => {
   return (
     <>
-      <Navbar />
+
       <section className="about-section">
         <div className="about-container">
           <div className="about-content">
@@ -51,3 +50,10 @@ const About = () => {
 };
 
 export default About;
+
+
+
+
+
+
+
