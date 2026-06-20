@@ -30,8 +30,8 @@ const AccountPage: React.FC = () => {
   const handleLogout = (): void => {
     console.log("Logging out user...");
     setIsLogoutModalOpen(false);
-    alert("Logged out successfully!");
-    navigate("/login");
+    setTimeout(() => {navigate("/login")},2000);
+    ;
   };
 
   const handleProfileUpdate = (e: React.FormEvent<HTMLFormElement>): void => {
